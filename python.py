@@ -15,7 +15,6 @@ class Shell(object):
 
     __i = Interface
 
-
     def __init__(self, i):
         self.__i = i
 
@@ -26,7 +25,6 @@ class Shell(object):
         arg = s.split(' ',1)[1]
         self.__i.put(self.functions[command](arg))
 
-
     def do_upper(s):
         return s.upper()
 
@@ -34,6 +32,7 @@ class Shell(object):
         return s
 
     functions = {'upper': do_upper, 'print': do_print}
+
 
 i = Interface()
 s = Shell(i)
